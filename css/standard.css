@@ -1,0 +1,187 @@
+/*--------------------------------------         */
+/* Übergreifend / Body                           */
+/*--------------------------------------         */
+hmtl, body {
+ overflow-y:hidden;
+}
+
+.bg {
+  position: fixed;
+  background-image: url(../images/mustang2.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 102px;
+  z-index: 1;
+}
+
+#info {
+position: fixed;
+bottom: 50px;
+left: 20px;
+background-color: #333;
+z-index: 4;
+color: #FFF;
+width: 10%;
+}
+
+#kopfbereich {
+
+  position:fixed;           ! Position des Kopfbereichs ist immer oben - FIX!;
+  top:0;                    ! Position oben;
+  left:0;                   ! Position ganz links;
+  border: 1px solid #000000;   ! Rahmenart und -farbe;
+  background-color:black;   ! Hintergrundfarbe;
+  width:100%;               ! Breite des Kopfbereichs;
+  height:100px;             ! Höhe des Kopfbereichs;
+  z-index:2;                ! Kopfbereich überlagert andere Bereiche;
+}
+
+#navibereich {
+
+  position:fixed;           ! Position des Kopfbereichs ist immer links! - FIX;
+  top:100px;                  ! Position unterhalb des Kopfbereiches;
+  left:0;                   ! Position ganz links;
+  border: 1px solid #000000;   ! Rahmenart und -farbe;
+  width:200px;              ! Breite des Navibereichs;
+  height:100%;          ! Minimal-Höhe des Navibereichs;
+  z-index:3;
+  background-color:rgba(0,0,0,0.8);
+                  ! Navibereich überlagert andere Berieche;
+}
+
+#textbereich {
+  position:fixed;        ! Position des Textbereichs immer in der Mitte!;
+  left:0;                   ! Textbereich fängt ganz links an;
+  right:0;                  ! Textbereich geht bis ganz rechts;
+  top:100px;                ! Außenabstand zum Kopfbereich;
+  padding-left:210px;        ! Innenabstand zum Menü;
+  padding-right:210px;      ! Innenabstand zum Newsbereich;
+  padding-top:20px;         ! Innenabstand nach oben;
+  padding-bottom:60px;      ! Innenabstand nach unten;
+  border: 1px solid #000000;    ! Rahmenart und -farbe;
+  height:100%;              ! Höhe des Textbereiches auf 100% eingestellt;
+  overflow-y: auto;         ! Zeige Scrollbalken rechts, falls notwendig;
+  background-color:rgba(255,255,255,0.4); ! Hintergrund ist weiß mit 50 %iger Transparenz;
+  z-index: 2;
+}
+
+#newsbereich {
+  position:fixed;
+  right:0px;
+  top:100px;
+  border: 1px solid #000000;
+  background-color:rgba(0,0,0,0.8);
+  width: 200px;
+  height:100%;
+  z-index:2;
+}
+
+
+    /* -- --------------- -- */
+    /* -- k y w b d s g n -- */
+    /* -- --------------- -- */
+
+#fussbereich {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: auto;
+  z-index:2;
+}
+
+#fussbereich .footer-ul > .footer-li {
+  font-family: 'Arial', sans-serif;
+  display: inline-block;
+  text-align: center;
+  padding: 30px;
+  padding-bottom: 2px;
+}
+
+#fussbereich .footer-ul > .footer-li > .footer--link {
+  color: #000;
+  text-decoration: none;
+  transition:  text-shadow 0.3s, font-weight 0.3s, color 0s, font-size 0.3s;
+}
+
+#fussbereich .footer-ul > .footer-li > .footer--link:hover {
+  font-size: 20px;
+  text-shadow: 3px 3px 0px #000;
+  font-weight: 700;
+  color: #FFF;
+  transition: text-shadow 0.3s, font-weight 0.3s, color 0s, font-size 0.3s, color 0.3s;
+}
+
+    /* -- --------------- -- */
+    /* -- --------------- -- */
+    /* -- --------------- -- */
+
+
+    
+/*                       */
+/*  Schriftformatierung  */
+/*                       */
+
+p {
+font-family: 'Arimo', sans-serif;
+font-style:normal;
+font-size:11pt;
+font-weight:normal;
+color:#000000;
+}
+.title {
+font-stretch:wider;
+font-weight:bold;
+color: #FFF;
+text-align: center;
+font-size: 40px;
+transition: text-shadow 0.5s, transform 0.5s, font-size 0s;
+}
+
+.title:hover {
+text-shadow: 4px 4px 10px #ff0000, -4px -4px 10px #ff0000;
+transition: 0.5s;
+transform: scale(1.3);
+}
+
+
+/* ---------------------- */
+/*    Menüformatierung    */
+/* ---------------------- */
+
+#navibereich .nav {
+  text-align:right;
+  list-style-type: none;
+  margin:20px 5px;
+
+}
+#navibereich. nav > li {
+  float:none;
+}
+
+#navibereich .nav > li > a {
+  text-transform:uppercase;
+  font-size:14px;
+  font-family: "Arimo";
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  display: block;
+  transition: all 0.3s ease-out 0s;
+  line-height: 35px;
+  text-decoration:none;
+  padding-right:10px;
+
+}
+
+#navibereich .nav > li > a.active {
+  font-weight:700;
+  text-shadow: 1px 1px black, 2px 2px black, 3px 3px black;
+
+}
+
+#navibereich .nav > li > a:hover {
+  font-weight:700;
+  font-style:italic;
+  text-shadow: 1px 1px grey, 2px 2px grey, 3px 3px grey;
